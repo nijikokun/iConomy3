@@ -3,6 +3,7 @@
 ##
 System:
     Currency: Coin                  # The name of your currency
+    Initial_Balance: 45.0			# The amount each player starts off with
     Logging:
         Enabled: false              # Should we log transactions? Does not work for flatfile.
     Database:
