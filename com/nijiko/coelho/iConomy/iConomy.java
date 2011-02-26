@@ -40,6 +40,9 @@ public class iConomy extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+        // Create iConomy Directory
+        getDataFolder().mkdir();
+
 		// Get the server
 		Server = getServer();
 
