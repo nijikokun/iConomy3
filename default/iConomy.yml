@@ -6,7 +6,7 @@ System:
     Logging:
         Enabled: false              # Should we log transactions? Does not work for flatfile.
     Database:
-        Type: MySQL                 # Can be MySQL, SQLite, or Flatfile
+        Type: SQLite                # Can be MySQL, SQLite, or Flatfile
         Name: minecraft             # Name of the database
         Table: iConomy              # Table, Flatfile uses this as the file name.
         MySQL:
