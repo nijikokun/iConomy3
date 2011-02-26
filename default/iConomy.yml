@@ -1,0 +1,16 @@
+##
+# iConomy Settings
+##
+System:
+    Currency: Coin
+    Logging:
+        Enabled: false
+    Database:
+        Type: MySQL
+        Name: minecraft
+        Table: iConomy
+        MySQL:
+            Username: root
+            Password:
+            Hostname:
+            Port:
