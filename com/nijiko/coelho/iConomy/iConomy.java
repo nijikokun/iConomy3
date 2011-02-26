@@ -40,8 +40,17 @@ public class iConomy extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-        // Create iConomy Directory
-        getDataFolder().mkdir();
+        try {
+            if(!getDataFolder().exists())
+                getDataFolder().mkdir();
+        } catch (Exception e) {
+            System.out.println("[iConomy] Could not create directory!");
+            System.out.println("[iConomy] You must manually make the iConomy/ directory!");
+        }
+
+        // Make sure we can read / write
+        getDataFolder().setWritable(true);
+        getDataFolder().setExecutable(true);
 
 		// Get the server
 		Server = getServer();
@@ -79,7 +88,6 @@ public class iConomy extends JavaPlugin {
 		try {
 			iDatabase = new iDatabase();
 		} catch(Exception e) {
-			this.getServer().getPluginManager().disablePlugin(this);
 			System.out.println("[iConomy] Failed to connect to database: " + e.getMessage());
 			return; 
 		}
@@ -101,7 +109,6 @@ public class iConomy extends JavaPlugin {
 			Bank = new Bank();
 			Bank.load();
 		} catch(Exception e) {
-			this.getServer().getPluginManager().disablePlugin(this);
 			System.out.println("[iConomy] Failed to load accounts from database: " + e.getMessage());
 			return; 
 		}

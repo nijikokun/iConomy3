@@ -2,13 +2,13 @@
 # iConomy Settings
 ##
 System:
-    Currency: Coin
+    Currency: Coin                  # The name of your currency
     Logging:
-        Enabled: false
+        Enabled: false              # Should we log transactions? Does not work for flatfile.
     Database:
-        Type: MySQL
-        Name: minecraft
-        Table: iConomy
+        Type: MySQL                 # Can be MySQL, SQLite, or Flatfile
+        Name: minecraft             # Name of the database
+        Table: iConomy              # Table, Flatfile uses this as the file name.
         MySQL:
             Username: root
             Password:

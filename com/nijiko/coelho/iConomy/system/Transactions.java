@@ -54,7 +54,7 @@ public class Transactions {
         long timestamp = System.currentTimeMillis()/1000;
 
         iConomy.getDatabase().executeQuery(
-            "INSERT INTO `" + Constants.SQL_Table + "_Transactions`(account_from, account_to, account_from_balance, account_to_balance, timestamp, set, gain, loss) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO `" + Constants.SQL_Table + "_Transactions`(account_from, account_to, account_from_balance, account_to_balance, `timestamp`, `set`, gain, loss) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             new Object[] { from, to, from_balance, to_balance, timestamp, set, gain, loss }
         );
     }
